@@ -82,7 +82,7 @@ def main(config, resume):
 
     #total_loss = 0.0
     #total_metrics = torch.zeros(len(metric_fns))
-    name = 'dnn.csv'
+    name = config['name']+'.csv' #'dnn.csv'
     with torch.no_grad():
         for i, (data, target) in enumerate(tqdm(data_loader)):
             data, target = data.to(device), target.to(device)
@@ -98,7 +98,7 @@ def main(config, resume):
             #for i, metric in enumerate(metric_fns):
             #    total_metrics[i] += metric(output, target) * batch_size
             
-    write_result('dnn.csv', predictions)
+    write_result(name, predictions)
 
     #n_samples = len(data_loader.sampler)
     #log = {'loss': total_loss / n_samples}

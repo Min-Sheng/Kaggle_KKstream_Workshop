@@ -1,9 +1,9 @@
 {
-    "name": "KKstream_resnet_bn_2",
+    "name": "KKstream_fc_bn_l2norm",
     "n_gpu": 1,
     
     "arch": {
-        "type": "KKstreamModelResNet",
+        "type": "KKstreamModel",
         "args": {}
     },
     "data_loader": {
@@ -20,7 +20,7 @@
         "type": "Adam",
         "args":{
             "lr": 0.001,
-            "weight_decay": 0,
+            "weight_decay": 1e-5,
             "amsgrad": true
         }
     },

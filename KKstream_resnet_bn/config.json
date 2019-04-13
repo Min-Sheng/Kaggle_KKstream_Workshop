@@ -1,5 +1,5 @@
 {
-    "name": "KKstream_resnet_bn_2",
+    "name": "KKstream_resnet_bn",
     "n_gpu": 1,
     
     "arch": {
@@ -41,7 +41,7 @@
         "save_period": 1,
         "verbosity": 2,
         
-        "monitor": "min val_loss",
+        "monitor": "max val_metrics",
         "early_stop": 10,
         
         "tensorboardX": true,
