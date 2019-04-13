@@ -1,5 +1,5 @@
 {
-    "name": "KKstream_fc",
+    "name": "KKstream_fc_bn",
     "n_gpu": 1,
     
     "arch": {
