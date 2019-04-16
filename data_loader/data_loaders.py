@@ -42,7 +42,7 @@ class KKstreamDataset(Dataset):
         #self.X_train = self.dataset[:, :-28].reshape(-1, 896)
         #self.y_train = self.dataset[:, -28:]
         
-        print(self.X_train.shape)
+        #print(self.X_train.shape)
 
     def __getitem__(self, index):
         feature = torch.from_numpy(self.X_train[index]).float()

@@ -1,15 +1,15 @@
 {
-    "name": "KKstream_rnncnn_bn",
+    "name": "KKstream_rnncnn_bn_2layer_gru",
     "n_gpu": 1,
     
     "arch": {
-        "type": "KKstreamModelRNNCNN",
+        "type": "KKstreamModelRNNCNN2",
         "args": {}
     },
     "data_loader": {
         "type": "KKstreamDataLoader",
         "args":{
-            "data_dir": "../kkbox/",
+            "data_dir": "../kkbox/kkstream_data.npz",
             "batch_size": 128,
             "shuffle": true,
             "validation_split": 0.2,
