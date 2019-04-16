@@ -10,10 +10,11 @@ Kaggle Competition- KKstream Deep Learning Workshop:
 ## Feature Engineering
 除了主辦單位提供的 preprocessed data 之外，我加入了從 raw data 中另外蒐集而來的 5 種特徵:
 
-1. Total duration in the slot: 在每個 time slot 中，用戶總共的撥劇時間長度。
+1. Total duration in the slot: 在每個 time slot 中，用戶總共的播劇時間長度。
 2. Average episode rate in the slot: 在每個 time slot 中，將每部劇所屬的集數總和除以每部劇的影集集數總和。
-3. Action types in the slot: 在每個 time slot 中，導致撥放器題旨撥放的原因。
-4. Trailer flags in the slot: 在每個 time slot 中，每部用戶觀看的影片使否為預告片。
+3. Platform kinds in the slot: 在每個 time slot 中，用戶所使用的播放平台。
+4. Action types in the slot: 在每個 time slot 中，導致播放器停止播放的原因。
+5. Trailer flags in the slot: 在每個 time slot 中，每部用戶觀看的影片使否為預告片。
 
 我認為這幾項特徵能進一步描述個用戶的看劇情形，對預測效果應該有所助益。
 
@@ -36,7 +37,7 @@ Kaggle Competition- KKstream Deep Learning Workshop:
 1. 一開始以 DNN (Dense Neural Network) 作為 baseline ，在 testing data 的 AUROC 表現為: 0.87084 。
 2. 改用 1D Convolution ResNet 的架構，在 testing data 的表現提升至: 0.88487 。
 3. 改用 ELU 取代 ReLU ， AUROC 略為提高至: 0.88522。
-4. 加入 1層 RNN (採用Bidirectional GRU)，並使用更多從 raw data 萃取的 features ，AUROC 升高至 0.88742 。
+4. 加入 1 層 RNN (採用Bidirectional GRU)，並使用更多從 raw data 萃取的 features ， AUROC 升高至 0.88742 。
 5. 增加為 2 層 GRU，得到最高 performance 為 0.88810 。
 
 ## Result
@@ -46,4 +47,4 @@ Kaggle Competition- KKstream Deep Learning Workshop:
 2. 除了 time slot 之外，加入用戶的其他看劇資訊對 performance 有很大幫助。
 
 ## Reference
-我使用 PyTorch Template: <https://github.com/victoresque/pytorch-template> ，快速地部屬我的 Deep Learning 系統。
+我使用 PyTorch Template: <https://github.com/victoresque/pytorch-template> ，快速部屬我的 Deep Learning 系統。
