@@ -38,7 +38,7 @@ Kaggle Competition- KKstream Deep Learning Workshop:
 2. 改用 1D Convolution ResNet 的架構，在 testing data 的表現提升至: 0.88487 。
 3. 改用 ELU 取代 ReLU ， AUROC 略為提高至: 0.88522。
 4. 加入 1 層 RNN (採用Bidirectional GRU)，並使用更多從 raw data 萃取的 features ， AUROC 升高至 0.88742 。
-5. 增加為 2 層 GRU，得到最高 performance 為 0.88810 。
+5. 增加為 2 層 GRU，得到最高 performance 為 0.88990 。
 
 ## Result
 
