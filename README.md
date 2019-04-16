@@ -43,6 +43,12 @@ Kaggle Competition- KKstream Deep Learning Workshop:
 <img width="80%" src="https://github.com/Min-Sheng/Kaggle_KKstream_Workshop/raw/master/leaderboard.png"/>
 
 ## Result
+這是最終 model 在 training set 上，在不同 iteration 的 BCE loss 以及 AUROC (Area Under the ROC curve) 。
+
+<img width="80%" src="https://github.com/Min-Sheng/Kaggle_KKstream_Workshop/raw/master/training_result.png"/>
+
+<img width="80%" src="https://github.com/Min-Sheng/Kaggle_KKstream_Workshop/raw/master/validation_result.png"/>
+
 
 ## Conclusion
 1. 考慮時序資訊的因素很重要。
