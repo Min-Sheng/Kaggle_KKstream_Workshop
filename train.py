@@ -9,8 +9,6 @@ import model.model as module_arch
 from trainer import Trainer
 from utils import Logger
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-
 def get_instance(module, name, config, *args):
     return getattr(module, config[name]['type'])(*args, **config[name]['args'])
 

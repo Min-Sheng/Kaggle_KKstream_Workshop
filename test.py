@@ -10,7 +10,7 @@ from train import get_instance
 import csv
 import numpy as np
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+#os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 def write_result(name, predictions):
     """
@@ -82,7 +82,7 @@ def main(config, resume):
 
     #total_loss = 0.0
     #total_metrics = torch.zeros(len(metric_fns))
-    name = config['name']+'.csv' #'dnn.csv'
+    name = config['name']+'2.csv' #'dnn.csv'
     with torch.no_grad():
         for i, (data, target) in enumerate(tqdm(data_loader)):
             data, target = data.to(device), target.to(device)

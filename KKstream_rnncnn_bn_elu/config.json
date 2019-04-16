@@ -1,15 +1,15 @@
 {
-    "name": "KKstream_rnncnn_bn",
+    "name": "KKstream_rnncnn_bn_newft",
     "n_gpu": 1,
     
     "arch": {
-        "type": "KKstreamModelRNNCNN",
+        "type": "KKstreamModelRNNCNN3",
         "args": {}
     },
     "data_loader": {
         "type": "KKstreamDataLoader",
         "args":{
-            "data_dir": "../kkbox/",
+            "data_dir": "../kkbox/kkstream_data.npz",
             "batch_size": 128,
             "shuffle": true,
             "validation_split": 0.2,
@@ -44,7 +44,7 @@
         "monitor": "max val_roc_metric",
         "early_stop": 10,
         
-        "tensorboardX": true,
+        "tensorboardX": false,
         "log_dir": "saved/runs"
     }
 }

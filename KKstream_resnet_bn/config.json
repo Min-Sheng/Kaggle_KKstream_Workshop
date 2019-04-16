@@ -41,7 +41,7 @@
         "save_period": 1,
         "verbosity": 2,
         
-        "monitor": "max val_metrics",
+        "monitor": "max val_roc_metric",
         "early_stop": 10,
         
         "tensorboardX": true,

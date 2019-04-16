@@ -28,15 +28,21 @@ class KKstreamDataset(Dataset):
     def __init__(self, file_path, training=True):
     
         if training==True:
-            self.dataset = np.load(file_path)['train_eigens']
+            self.dataset = np.load(file_path)
+            self.X_train = self.dataset['train_eigens']
+            self.y_train = self.dataset['train_labels']
         else:
-            self.dataset = np.load(file_path)['issue_eigens']
+            self.dataset = np.load(file_path)
+            self.X_train = self.dataset['test_eigens']
+            self.y_train = self.dataset['test_labels']
         
         # NOTE: a 896d feature vector for each user, the 28d vector in the end are
         #       labels
         #       896 = 32 (weeks) x 7 (days a week) x 4 (segments a day)
-        self.X_train = self.dataset[:, :-28].reshape(-1, 896)
-        self.y_train = self.dataset[:, -28:]
+        #self.X_train = self.dataset[:, :-28].reshape(-1, 896)
+        #self.y_train = self.dataset[:, -28:]
+        
+        print(self.X_train.shape)
 
     def __getitem__(self, index):
         feature = torch.from_numpy(self.X_train[index]).float()
