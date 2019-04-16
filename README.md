@@ -34,11 +34,11 @@ Kaggle Competition- KKstream Deep Learning Workshop:
 此外，我使用 batch normalization 加速收斂與避免 gradient vanishing/exploding problem ，並改用 ELU activation function 取代 ReLU 。
 
 ## Experiment
-1. 一開始以 DNN (Dense Neural Network) 作為 baseline ，在 testing data 的 AUROC 表現為: 0.87084 。
-2. 改用 1D Convolution ResNet 的架構，在 testing data 的表現提升至: 0.88487 。
+1. 一開始以 DNN (Dense Neural Network) 作為 baseline ，在 testing data public leaderboard 的 AUROC 表現為: 0.87084 。
+2. 改用 1D Convolution ResNet 的架構，AUROC 提升至: 0.88487 。
 3. 改用 ELU 取代 ReLU ， AUROC 略為提高至: 0.88522。
 4. 加入 1 層 RNN (採用Bidirectional GRU)，並使用更多從 raw data 萃取的 features ， AUROC 升高至 0.88742 。
-5. 增加為 2 層 GRU，得到最高 performance 為 0.88990 。
+5. 增加為 2 層 GRU，得到最高 AUROC performance 為 0.88990 。
 
 ## Result
 
