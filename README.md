@@ -40,6 +40,8 @@ Kaggle Competition- KKstream Deep Learning Workshop:
 4. 加入 1 層 RNN (採用Bidirectional GRU)，並使用更多從 raw data 萃取的 features ， AUROC 升高至 0.88742 。
 5. 增加為 2 層 GRU，得到最高 AUROC performance 為 0.88990 。
 
+<img width="80%" src="https://github.com/Min-Sheng/Kaggle_KKstream_Workshop/raw/master/leaderboard.png"/>
+
 ## Result
 
 ## Conclusion
