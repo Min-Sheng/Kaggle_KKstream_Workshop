@@ -1,9 +1,9 @@
 {
-    "name": "KKstream_rnncnn_bn_newft",
+    "name": "KKstream_rnncnn_bn_newft_3L",
     "n_gpu": 1,
     
     "arch": {
-        "type": "KKstreamModelRNNCNN2",
+        "type": "KKstreamModelRNNCNN3",
         "args": {}
     },
     "data_loader": {
@@ -24,7 +24,7 @@
             "amsgrad": true
         }
     },
-    "loss": "mse_loss",
+    "loss": "binary_cross_entropy",
     "metrics": [
         "roc_metric"
     ],
